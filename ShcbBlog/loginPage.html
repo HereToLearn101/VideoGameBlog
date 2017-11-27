@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Post Page</title>
+		<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+		<script>tinymce.init({ selector:'textarea' });</script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="home.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Calculators</a></li>
+						<li><a href="#">Game Systems</a></li>
+						<li><a href="#">Video Games</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Search</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Login</a></li>
+						<a href="#" class="navbar-brand"><span class="glyphicon glyphicon-user"></span></a>
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container" id="login_container">
+			<div id="blogBanner" class="col-md-12 col-sm-12">
+				<a href="home.html"><img src="blogBanner.png" width="100%"></a>
+			</div>
+			<div id="login">
+				<form class="form-signin">
+					<h2 class="form-signin-heading">User Sign In</h2>
+					<label type="text" class="input-block-level" placeholder="Email address"></label>
+					<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+					<label type="text" class="input-block-level" placeholder="Email address"></label>
+					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+					<!-- <div class="checkbox">
+						<label>
+							<input type="checkbox" value="remember-me"> Remember me
+						</label>
+					</div>
+ -->					<button class="btn btn-large btn-success" type="submit">Sign in</button>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

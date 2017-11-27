@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog</title>
+		
+		<link rel="stylesheet" type="text/css" href="home.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculators<span class="caret"></span></a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Game Systems<span class="caret"></span></a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Video Games<span class="caret"></span></a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Search</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Login</a></li>
+						<a href="#" class="navbar-brand"><span class="glyphicon glyphicon-user"></span></a>
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container" id="pending_posts">
+			<div id="blogBanner" class="col-md-12 col-sm-12">
+				<img src="blogBanner.png" width="100%">
+			</div>
+			<h1>Pending Posts</h1>
+			<div class="col-md-12" id="pendingPosts">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#calculators">Calculators</a></li>
+					<li><a data-toggle="tab" href="#game_systems">GameSystems</a></li>
+					<li><a data-toggle="tab" href="#video_games">Video Games</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="calculators" class="tab-pane fade in active">
+						<h3>Calculators</h3>
+						<table class="table table-dark table-bordered">
+							<thead>
+								<tr>
+									<th width="30%">Title</th>
+									<th width="25%">Author</th>
+									<th width="35%">Description</th>
+									<th width="10%">Approve</th>
+								</tr>
+							</thead>
+							<tbody>
+								<td>Title</td>
+								<td>Skip Baker</td>
+								<td>
+									<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+								</td>
+								<td>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">  Yes
+										</label>
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">  No
+										</label>
+									</div>
+									
+								</td>
+							</tbody>
+							<tbody>
+								<td>Title</td>
+								<td>Skip Baker</td>
+								<td>
+									<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+								</td>
+								<td>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value="option1">  Yes
+										</label>
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value="option2">  No
+										</label>
+									</div>
+									
+								</td>
+							</tbody>
+						</table>
+					</div>
+					<div id="game_systems" class="tab-pane fade">
+						<!-- <h3>GameSystems</h3> -->
+						<div class="tab-content">
+							<div class="tab-pane fade in active">
+								<h3>GameSystems</h3>
+								<table class="table table-dark table-bordered">
+									<thead>
+										<tr>
+											<th width="30%">Title</th>
+											<th width="25%">Author</th>
+											<th width="35%">Description</th>
+											<th width="10%">Approve</th>
+										</tr>
+									</thead>
+									<tbody>
+										<td>Title</td>
+										<td>Skip Baker</td>
+										<td>
+											<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+										</td>
+										<td>
+											<div class="form-check form-check-inline">
+												<label class="form-check-label">
+													<input class="form-check-input" type="checkbox" value="option1">  Yes
+												</label>
+												<label class="form-check-label">
+													<input class="form-check-input" type="checkbox" value="option2">  No
+												</label>
+											</div>
+											
+										</td>
+									</tbody>
+									<tbody>
+										<td>Title</td>
+										<td>Skip Baker</td>
+										<td>
+											<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+										</td>
+										<td>
+											<div class="form-check form-check-inline">
+												<label class="form-check-label">
+													<input class="form-check-input" type="checkbox" value="option1">  Yes
+												</label>
+												<label class="form-check-label">
+													<input class="form-check-input" type="checkbox" value="option2">  No
+												</label>
+											</div>
+											
+										</td>
+									</tbody>
+								</table>
+							</div>
+							<div id="video_games" class="tab-pane fade">
+								<div class="tab-content">
+									<div class="tab-pane fade in active">
+										<h3>Video Games</h3>
+										<table class="table table-dark table-bordered">
+											<thead>
+												<tr>
+													<th width="30%">Title</th>
+													<th width="25%">Author</th>
+													<th width="35%">Description</th>
+													<th width="10%">Approve</th>
+												</tr>
+											</thead>
+											<tbody>
+												<td>Title</td>
+												<td>Skip Baker</td>
+												<td>
+													<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+												</td>
+												<td>
+													<div class="form-check form-check-inline">
+														<label class="form-check-label">
+															<input class="form-check-input" type="checkbox" value="option1">  Yes
+														</label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="checkbox" value="option2">  No
+														</label>
+													</div>
+													
+												</td>
+											</tbody>
+											<tbody>
+												<td>Title</td>
+												<td>Skip Baker</td>
+												<td>
+													<p>Haxx0r ipsum memory leak packet sniffer epoch cookie socket gcc bypass terminal L0phtCrack highjack.</p>
+												</td>
+												<td>
+													<div class="form-check form-check-inline">
+														<label class="form-check-label">
+															<input class="form-check-input" type="checkbox" value="option1">  Yes
+														</label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="checkbox" value="option2">  No
+														</label>
+													</div>
+													
+												</td>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

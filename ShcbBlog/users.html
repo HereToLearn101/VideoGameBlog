@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Post Page</title>
+	<script src="https://use.fontawesome.com/29e07f4330.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Calculators</a>
+					</li>
+					<li>
+						<a href="#">Game Systems</a>
+					</li>
+					<li>
+						<a href="#">Video Games</a>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#">Sign Up</a>
+					</li>
+					<li>
+						<a href="#">Login</a>
+					</li>
+					<a href="#" class="navbar-brand">
+						<span class="glyphicon glyphicon-user"></span>
+					</a>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" id="users_container">
+		<div id="blogBanner" class="col-md-12 col-sm-12">
+			<a href="home.html">
+				<img src="blogBanner.png" width="100%">
+			</a>
+		</div>
+		<h1>Users</h1>
+		<hr>
+		<div class="well well-sm">
+			<table class="table">
+				<thead>
+					<tr>
+						<th> User Name</th>
+						<th> Status</th>
+						<th> Confirm?</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>the_mark7</td>
+						<td>
+							<label>
+								<input type="checkbox" value=""> User</label>
+							<label>
+								<input type="checkbox" value=""> Contributor</label>
+							<label>
+								<input type="checkbox" value=""> Admin</label>
+						</td>
+						<td>
+							<button class="btn btn-success" type="submit">Make Changes</button>
+						</td>
+						<td>
+							<a href="#myModal" data-toggle="modal" data-target="#myModal">
+								<span>
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h3 id="myModalLabel">Delete Confirmation</h3>
+					</div>
+					<div class="modal-body">
+						<p class="error-text">Are you sure you want to delete the user?</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+						<button class="btn btn-danger" data-dismiss="modal">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

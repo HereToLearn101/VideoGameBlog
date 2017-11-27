@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #1 - Make security the default namespace -->
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+             xmlns:beans="http://www.springframework.org/schema/beans" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/security 
+http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    
+    <!-- to make sure that you can use security tags in jsps -->
+    <beans:bean id="webexpressionHandler" 
+                class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
+<!--        <beans:bean id="encoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>-->
+    
+    
+    <!--<http pattern="/login" security="none" />  security none really does mean NONE. At this endpoint you can't even use secirty jsp tags--> 
+    <http pattern="/css/**" security="none" />
+    <http pattern="/js/**" security="none" />
+    <http pattern="/img/**" security="none" />
+    
+<!--    <http use-expressions="true" auto-config="true" pattern="/login" >
+        <intercept-url pattern="**" access="isAnonymous()" />
+        <access-denied-handler error-page="/home"/>
+    </http>-->
+    
+    <http use-expressions="true" auto-config="true" pattern="/" >
+        <intercept-url pattern="**" access="true" />
+    </http>
+    
+    <http auto-config="true" use-expressions="false">
+
+        <!-- this is where my login form needs to go, and how/where it happens -->
+        <form-login login-processing-url="/j_spring_security_check"
+                    login-page="/login"
+                    authentication-failure-url="/login?login_error=1"/>
+        <logout logout-success-url="/" />
+        
+        
+        <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <intercept-url pattern="/create/post" 
+                       access="ROLE_USER" />
+<!--        <intercept-url pattern="/anyAuthed" access="IS_AUTHENTICATED_FULLY" />
+        <intercept-url pattern="/adminOnly" access="ROLE_ADMIN" /> 
+        <intercept-url pattern="/adminOrUser" access="ROLE_ADMIN, ROLE_USER" /> 
+        <intercept-url pattern="/userOnly" access="ROLE_USER" />
+        <intercept-url pattern="/**" access="ROLE_USER" />-->
+        
+    </http>
+    <!-- #4 - Authentication Manager config --> 
+    <authentication-manager>
+        <!-- #4a - Authentication Provider - we’re using the JDBC service -->
+        <authentication-provider>
+            <!--<password-encoder ref="encoder"/>-->
+            <!-- #4b - Tells Spring Security where to look for user information -->
+            <!--       We use the dataSource defined in spring-persistence.xml  -->
+            <!--       and we give Spring Security the query to use to lookup   -->
+            <!--       the user’s credentials (get the password from the users  -->
+            <!-- tables and get the roles from the authorities table) --> 
+<!--            <jdbc-user-service id="userService"
+                               data-source-ref="dataSourceBean"
+                               users-by-username-query="SELECT user_name AS username, user_password AS password, user_enabled AS enabled FROM users WHERE user_name=?"
+                               authorities-by-username-query="SELECT user_name AS username, authority FROM authorities WHERE user_name=?" />-->
+                               <jdbc-user-service id="userService"
+                               data-source-ref="dataSourceBean"
+                               users-by-username-query="SELECT user_name, user_password, user_enabled FROM users WHERE user_name=?"
+                               authorities-by-username-query="SELECT user_name, authority FROM authorities WHERE user_name=?" />
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>
